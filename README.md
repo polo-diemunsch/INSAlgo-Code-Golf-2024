@@ -44,10 +44,10 @@ Votre score correspond à la somme de la taille de vos programmes. On entend par
 - S'il y a des entrées, vous pouvez les lire dans la console ou directement dans le fichier
 - Les seules entrées autorisées sont celles fournies avec le sujet
 - Les seules entrées sur lesquelles votre programme sera testé sont celles de l'énoncé
+- Pas le droit aux librairies autres que la bibliothèque standard du langage
 - Pas de requêtes internet dans le code
-- Pas le droit d'écrire votre librairie externe
 - Pas le droit d'inventer un langage qui résout juste cet exercice
-- It works on your machine
+- Les membres du bureau d'INSAlgo et ceux qui ont aidé à préparer le concours ne peuvent pas gagner les prix :'(
 
 ## Exercices
 

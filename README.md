@@ -40,7 +40,7 @@ Votre score correspond à la somme de la taille de vos programmes. On entend par
 
 - **Interdit aux IA génératives** (ChatGPT, Copilot, ...) : on vous fait confiance, et vous devrez nous expliquer votre code
 - Recherches internet autorisées, mais vous devrez donner vos sources
-- Le code d'un exercice doit tenir dans un seul fichier
+- Le code d'un exercice doit tenir dans un seul fichier, si un langage a besoin de flags pour faire foncitonner votre solution, trouver un moyen de préciser ces flags dans le fichier ou votre soumission sera refusée.
 - S'il y a des entrées, vous pouvez les lire dans la console ou directement dans le fichier
 - Les seules entrées autorisées sont celles fournies avec le sujet
 - Les seules entrées sur lesquelles votre programme sera testé sont celles de l'énoncé

@@ -56,5 +56,5 @@ Votre score correspond à la somme de la taille de vos programmes. On entend par
 1. [Nombres premiers](1%20-%20premiers/sujet.md)
 2. [Palindromes](2%20-%20palindromes/sujet.md)
 3. [Spirale](3%20-%20spirale/sujet.md)
-4. ???
-5. ???
+4. [1202 Program Alarm](4%20-%20alarme/sujet.md)
+5. [Parcours de nénuphar](5%20-%20nenuphar/sujet.md)

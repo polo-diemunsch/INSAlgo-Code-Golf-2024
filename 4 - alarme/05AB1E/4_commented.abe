@@ -1,0 +1,21 @@
+',¡                                   # split input by ','
+  12¬ǝ                                # a[1]=12 (push '12' and get head ('1'))
+    2Dǝ                               # a[2]=2
+      [                               # infinite loop
+        D                               # duplicate a
+          ¾è99Q#                        # if a[counter_variable]==99: break
+            ÐÐÐ                         # push 6 copies of a
+              ¾>èè                      # push a[a[counter_variable+1]]
+                Š                       # triple swap (stack: [..., a[a[counter_variable+1]], a, a])
+                  ¾Ìèè                  # push a[a[counter_variable+2]] (stack: [..., a[a[counter_variable+1]], a[a[counter_variable+2]]])
+                    ŠŠ                  # double triple swap (stack: [..., a[a[counter_variable+1]], a[a[counter_variable+2]], a])
+                      ¾è<i              # if a[counter_variable]-1 (in this case test if a[counter_variable]==2)
+                        *                 # multiply
+                      ë                 # else
+                        +                 # add
+                      }                 # end if
+                        s               # swap
+                          ¾3+èǝ         # assign to a[a[counter_variable+3]]
+                            4F¼         # increment counter_variable by 4
+      ]                               # end infinite loop
+        ¬                             # get a[0]

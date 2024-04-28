@@ -1,60 +1,31 @@
-# Concours de Code Golf d'INSAlgo
+# INSAlgo 2024 Code Golf Contest
 
-```text
+My different solutions for [INSAlgo 2024 Code Golf Contest](https://github.com/INSAlgo/Code-Golf-2024).
 
-      '\                   .  .                        |>18>>
-        \              .         ' .                   |
-       O>>         .                 'o                |
-        \       .                                      |
-        /\    .                                        |
-       / /  .'                                         |
- jgs^^^^^^^`^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-```
+## 05AB1E
 
-## Le concept
+I mostly used [05AB1E](https://github.com/Adriandmen/05AB1E) golfing language with the legacy [python version](https://github.com/Adriandmen/05AB1E/tree/fb4a2ce2bce6660e1a680a74dd61b72c945e6c3b).
 
-Écrivez le code le plus court pour chaque exercice.  
-Ouvert à tous les étudiant·es de l'INSA Lyon et du campus.  
-5 exercices, 1 nouveau chaque jour.  
-Tout langage autorisé.  
+For the 05AB1E solutions :
 
-## Participer
+- `[DAY].abe` is the base code.
 
-Envoyez vos solutions en message privé au bot discord d'INSAlgo, Dijkstra-Chan, que vous trouverez sur le [discord](https://discord.com/invite/fGTkMQetSC) dans le salon #code-golf. Utilisez la commande `!golf submit 1` en remplaçant 1 par le numéro de l'exercice, et en attachant votre fichier. Assurez-vous que le programme fonctionne, le bot ne vérifie pas automatiquement.
+- `[DAY]_commented.abe` is the commented version.
 
-Vous pouvez envoyer autant de programmes que vous voulez, pour essayer de réduire la taille de votre code jusqu'à la fin du concours. Vous n'êtes pas obligés de faire tous les exercices.
+- `[DAY].05AB1E` is the submitted code.
 
-## Classement
+    It is encoded in [`osabie encoding`](https://github.com/Adriandmen/05AB1E/blob/fb4a2ce2bce6660e1a680a74dd61b72c945e6c3b/docs/code-page.md) to reduce file size.
+    
+    Encoded from `[DAY].abe` using [osabie-encode](./nix/05AB1E-encode/osabie-encode.py).
+    
+    Needs osabie `-c` flag to run.
 
-Le classement des gagnant·es se fera le **mardi 30 avril** (mardi de la rentrée) à INSAlgo, en 219 du bâtiment Ada Lovelace (IF) à 18h15. Les gagnant·es devront montrer que leur code fonctionne et expliquerons leurs solutions. Nous vérifierons que ce sont les bons résultats.
+## Flake
 
-Votre score correspond à la somme de la taille de vos programmes. On entend par taille d'un fichier son nombre d'octets (bytes), qui correspond en général au nombre de caractères. Pour les exercices que vous n'avez pas faits, votre score sera celui de l'implémentation de référence que nous avons écrit.
+The flake provides a nix shell with the dependencies needed to run the different programs :
 
-## Prix
+- python3: for python solutions.
 
-- 64 €
-- 32 €
-- 16 €
+- [osabie](./nix/05AB1E/default.nix) : 05AB1E interpreter.
 
-## Règles
-
-- **Interdit aux IA génératives** (ChatGPT, Copilot, ...) : on vous fait confiance, et vous devrez nous expliquer votre code
-- Recherches internet autorisées, mais vous devrez donner vos sources
-- Le code d'un exercice doit tenir dans un seul fichier, si un langage a besoin de flags pour faire fonctionner votre solution, trouver un moyen de préciser ces flags dans le fichier ou votre soumission sera refusée.
-- S'il y a des entrées, vous pouvez les lire dans la console ou directement dans le fichier
-- Les seules entrées autorisées sont celles fournies avec le sujet
-- Les seules entrées sur lesquelles votre programme sera testé sont celles indiquées dans l'énoncé
-- Le résultat doit être écrit dans la console
-- Le résultat doit correspondre exactement au résultat attendu (pas de caractère de plus ou de moins)
-- Pas le droit aux librairies autres que la bibliothèque standard du langage
-- Pas de requêtes internet dans le code
-- Pas le droit d'inventer un langage qui résout juste cet exercice
-- Les membres du bureau d'INSAlgo et ceux qui ont aidé à préparer le concours ne peuvent pas gagner les prix :'(
-
-## Exercices
-
-1. [Nombres premiers](1%20-%20premiers/sujet.md)
-2. [Palindromes](2%20-%20palindromes/sujet.md)
-3. [Spirale](3%20-%20spirale/sujet.md)
-4. [1202 Program Alarm](4%20-%20alarme/sujet.md)
-5. [Parcours de nénuphar](5%20-%20nenuphar/sujet.md)
+- [osabie-encode](./nix/05AB1E-encode/default.nix) : wrapper for [osabie-encode.py](./nix/05AB1E-encode/osabie-encode.py).

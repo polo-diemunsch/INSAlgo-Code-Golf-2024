@@ -1,0 +1,32 @@
+|©U                                     # read all inputs, put them in register_c and clear the stack
+  0D‚                                   # push [0, 0]
+    õ                                   # push ""    
+      [                                 # infinite loop
+        ¾>µ                               # loop until true
+          VU                                # put path in Y and [i, j] in X
+            ¯                               # push global array
+              ʒ                             # filter
+                XQ                            # check if element == X
+              }                             # end filter
+                g_                          # check if length of filtered array is 0 ([i, j] is not in global array)
+        }                                 # end loop until true
+          Xˆ                              # put X in global array
+            Yg698Q#                       # if path length == 698: break
+              Xθ349‹                      # test j < 349 (j + 1 < 350)
+                ®XнèXθ>è'#Q               # test register_c[i][j+1] == '#'
+                  &                       # and
+                    i                     # if
+                      r                     # reverse stack
+                        Y'R+                # push path + 'R'
+                          X`>‚              # push [i, j+1]
+                            r               # reverse stack
+                    }                     # end if
+                      ®Xн>èXθè'#Q         # test register_c[i+1][j] == '#'
+                        i                 # if
+                          r                 # reverse stack
+                            Y'D+            # push path + 'D'
+                              X>`<‚         # push [i+1, j]
+                                r           # reverse stack
+        ]                               # end infinite loop
+          Y                             # push path
+            €,                          # for each character: print on a new line

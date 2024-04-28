@@ -1,0 +1,7 @@
+A               # lowercase alphabet
+  5ã            # cartesian power (a.repeat(5))
+    ʒ           # filter
+      Â         # push element and reverse(element)
+        Q       # test equality
+    }           # end filter
+      »         # join by newline

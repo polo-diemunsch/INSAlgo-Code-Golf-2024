@@ -12,21 +12,19 @@
         }                                 # end loop until true
           Xˆ                              # put X in global array
             Yg698Q#                       # if path length == 698: break
-              Xθ349‹                      # test j < 349 (j + 1 < 350)
                 ®XнèXθ>è'#Q               # test register_c[i][j+1] == '#'
-                  &                       # and
-                    i                     # if
-                      r                     # reverse stack
-                        Y'R+                # push path + 'R'
-                          X`>‚              # push [i, j+1]
-                            r               # reverse stack
-                    }                     # end if
-                      ®Xн>èXθè'#Q         # test register_c[i+1][j] == '#'
-                        i                 # if
+                  i                       # if
+                    r                       # reverse stack
+                      Y'R+                  # push path + 'R'
+                        X`>‚                # push [i, j+1]
                           r                 # reverse stack
-                            Y'D+            # push path + 'D'
-                              X>`<‚         # push [i+1, j]
-                                r           # reverse stack
+                  }                       # end if
+                    ®Xн>èXθè'#Q           # test register_c[i+1][j] == '#'
+                      i                   # if
+                        r                   # reverse stack
+                          Y'D+              # push path + 'D'
+                            X>`<‚           # push [i+1, j]
+                              r             # reverse stack
         ]                               # end infinite loop
-          Y                             # push path
-            €,                          # for each character: print on a new line
+          €                             # for each character (of the element on top of the stack, so the next path in the queue)
+            ,                             # print on a new line

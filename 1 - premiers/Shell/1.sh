@@ -1,0 +1,1 @@
+for i in {2..541};do [ $(factor $i| wc -w) = 2 ]&&echo $i;done

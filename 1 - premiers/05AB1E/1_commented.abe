@@ -1,0 +1,3 @@
+т           # push 100
+  Åp        # push the a-th first prime numbers
+    »       # join by newline

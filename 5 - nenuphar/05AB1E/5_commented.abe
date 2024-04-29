@@ -1,30 +1,24 @@
-|©U                                     # read all inputs, put them in register_c and clear the stack
-  0D‚                                   # push [0, 0]
-    õ                                   # push ""    
-      [                                 # infinite loop
-        ¾>µ                               # loop until true
-          VU                                # put path in Y and [i, j] in X
-            ¯                               # push global array
-              ʒ                             # filter
-                XQ                            # check if element == X
-              }                             # end filter
-                g_                          # check if length of filtered array is 0 ([i, j] is not in global array)
-        }                                 # end loop until true
-          Xˆ                              # put X in global array
-            Yg698Q#                       # if path length == 698: break
-                ®XнèXθ>è'#Q               # test register_c[i][j+1] == '#'
-                  i                       # if
-                    r                       # reverse stack
-                      Y'R+                  # push path + 'R'
-                        X`>‚                # push [i, j+1]
-                          r                 # reverse stack
-                  }                       # end if
-                    ®Xн>èXθè'#Q           # test register_c[i+1][j] == '#'
-                      i                   # if
-                        r                   # reverse stack
-                          Y'D+              # push path + 'D'
-                            X>`<‚           # push [i+1, j]
-                              r             # reverse stack
-        ]                               # end infinite loop
-          €                             # for each character (of the element on top of the stack, so the next path in the queue)
-            ,                             # print on a new line
+|                                           # read all inputs
+  '#1:                                      # replace all '# by 1
+    ©U                                      # put in register_c and clear the stack
+      0                                     # push 0
+        D                                   # duplicate
+          õ                                 # push ""    
+            1089F                           # repeat 1089 times (can be shortened to Ž4ζF with 05AB1E elixir version)
+              ˆ                               # append to global array
+                V                             # put in Y
+                  U                           # put in X
+                    ®X>èYè                    # test register_c[X+1][Y] (== '#')
+                      i                       # if
+                        X>Y                     # push X+1, Y
+                          ¯θ                    # push global array[-1] (current path)
+                            'D+                 # add 'D'
+                      }                       # end if
+                        ®XèY>è                # test register_c[X][Y+1] (== '#')
+                          i                   # if
+                            XY>                 # push X, Y+1
+                              ¯θ                # push global array[-1] (current path)
+                                'R+             # add 'R'
+            ]                               # end if / end repeat
+              €                             # for each character (of the element on top of the stack, so the next path in the queue)
+                ,                             # print on a new line

@@ -2,7 +2,7 @@ g=[input()for i in range(350)]
 q=[(0,0,"")]
 v={0}
 while q:
- i,j,p=q.pop(0)
+ i,j,p=q.pop()
  if(i,j)in v:continue
  v.add((i,j))
  if i+j==698:print(p[:-1]);break

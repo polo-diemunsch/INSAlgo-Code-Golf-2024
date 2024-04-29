@@ -29,3 +29,5 @@ The flake provides a nix shell with the dependencies needed to run the different
 - [osabie](./nix/05AB1E/default.nix) : 05AB1E interpreter.
 
 - [osabie-encode](./nix/05AB1E-encode/default.nix) : wrapper for [osabie-encode.py](./nix/05AB1E-encode/osabie-encode.py).
+
+- [evaluate-path](./nix/evaluate-path/default.nix) : wrapper for [evaluate-path.py](./nix/evaluate-path/evaluate-path.py). Allows to test paths validity for day 5 problem.

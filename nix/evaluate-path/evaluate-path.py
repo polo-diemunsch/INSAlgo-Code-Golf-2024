@@ -31,7 +31,7 @@ def shortest_path_length(graph):
 def evaluate_path(graph, path):
     if len(graph) == 0 or len(graph[0]) == 0:
         print("❓ Empty graph", file=sys.stderr)
-        return False, graph
+        return False, []
 
     expected_length = shortest_path_length(graph)
     if expected_length == -1:
@@ -51,15 +51,18 @@ def evaluate_path(graph, path):
         print(f"🤯 Timmy falls into the water at spawn ({i}, {j})")
         return False, out_graph
     
-    for direction in path:
-        if direction == 'R':
+    for index in range(len(path)):
+        if path[index] == 'R':
             j += 1
-        elif direction == 'D':
+        elif path[index] == 'D':
             i += 1
-        elif direction == 'L':
+        elif path[index] == 'L':
             j -= 1
-        elif direction == 'U':
+        elif path[index] == 'U':
             i -= 1
+        else:
+            print(f"🧭 Invalid direction at position {index} (wtf is {path[index]} ?)")
+            return False, out_graph
         
         if i < 0 or i >= len(graph) or j < 0 or j >= len(graph[i]):
             print(f"😱 Timmy falls out of bounds at coordinnates ({i}, {j})")

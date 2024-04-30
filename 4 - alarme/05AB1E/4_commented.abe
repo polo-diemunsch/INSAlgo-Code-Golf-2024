@@ -3,7 +3,7 @@
     2Dǝ                               # a[2]=2
       [                               # infinite loop
         D                               # duplicate a
-          ¾è99Q#                        # if a[counter_variable]==99: break
+          ¾è₃›#                        # if a[counter_variable] > 95: break
             ÐÐÐ                         # push 6 copies of a
               ¾>èè                      # push a[a[counter_variable+1]]
                 Š                       # triple swap (stack: [..., a[a[counter_variable+1]], a, a])

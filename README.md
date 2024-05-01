@@ -2,6 +2,8 @@
 
 My different solutions for [INSAlgo 2024 Code Golf Contest](https://github.com/INSAlgo/Code-Golf-2024).
 
+Thanks [jimmywengzj](https://github.com/jimmywengzj) for the competition and big wp :)
+
 ## 05AB1E
 
 I mostly used [05AB1E](https://github.com/Adriandmen/05AB1E) golfing language with the legacy [python version](https://github.com/Adriandmen/05AB1E/tree/fb4a2ce2bce6660e1a680a74dd61b72c945e6c3b).
